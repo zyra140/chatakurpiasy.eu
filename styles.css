@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+background: linear-gradient(45deg, rgb(43, 179, 252), rgb(60, 32, 161));
+color: #fff;
+font-family: Helvatica, sans-serif;
+min-height: 100vh;
+min-width: 100vw;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 64px;
+overflow-x: hidden;
+}
+
+h1 {
+  font-size: 96px;
+  text-align: center;
+  margin: 96px;
+}
+
+.thumbnail {
+  max-height: 200px;
+  max-width: 300px;
+  overflow: hidden;
+  margin: 32px;
+  transform: scale(1);
+  transition: transform 0.3s;
+  cursor: pointer;
+  border: solid 3px rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 48px 2px rgba(0, 0, 0, 0.5);
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+.thumbnail img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.thumbnail img:focus,
+.thumbnail img:focus-visible {
+  border: solid 5px rgb(78, 76, 226);
+  
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style-type: none;
+  background: linear-gradient(
+    60deg, 
+    rgba(255,255,255,0.2),
+    rgba(255,255,255,0.1));
+  padding: 64px;
+  border-radius: 20px;
+}
+
+.popup {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  position: fixed;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.3s;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup.fade-out {
+  animation: fadeOut 0.3s both;
+}
+
+.popup img {
+  max-height: 80%;
+  max-width: 80%;
+}
+
+.popup__close {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 128px;
+  position: fixed;
+  top: 64px;
+  right: 64px;
+}
+
+.popup__arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 128px;
+  height: 128px;
+  width: 128px;
+  line-height: 128px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.popup__close,
+.popup__arrow {
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.popup__close:hover,
+.popup__arrow:hover {
+  opacity: 1;
+}
+
+.popup__arrow--left {
+  left: 5%;
+}
+
+.popup__arrow--right {
+  right: 5%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
