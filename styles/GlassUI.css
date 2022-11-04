@@ -21,14 +21,28 @@ body {
 }
 
 .container {
-  height: 66%;
-  width: 66%;
+  height: 70%;
+  width: 70%;
   background-color: rgba(0, 0, 0, 0.75);
   background: linear-gradient(to right top, rgba(0 , 0, 0 ,0.75), rgba(0, 0, 0, 0.25));
   border-radius: 20px;
   position: relative;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+}
+
+.main__photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__photo img {
+  width: 50%;
+  border: solid black 3px;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .bg__img {
@@ -40,14 +54,21 @@ body {
   top: 0;
   right: 60%;
   height: 30vh;
-  animation: slideDown 5s linear infinite;
+  animation: slideDown 8s linear infinite;
 }
 
 .bg__img--dots {
   top: 0;
   left: 50%;
   height: 75vh;
-  animation: rotate 10s linear infinite;
+  animation: rotate 14s linear infinite;
+}
+
+.logo {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: large;
 
 }
 

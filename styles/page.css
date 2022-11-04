@@ -1,0 +1,32 @@
+:root {
+  --green: #38ccae;
+  --dark: #1b1b1b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--green);
+  background: linear-gradient(to right top, var(--dark), var(--green));
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+}
+
+.pageMainText {
+  margin-left: 20px;
+  color: white;
+}
